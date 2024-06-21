@@ -25,7 +25,7 @@ BlogBlooms is a web application for blogging built using Node.js, Express.js, Mo
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/Rajeev12R/BlogBloom.git>
    cd BlogBlooms
    ```
 
