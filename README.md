@@ -1,4 +1,3 @@
-Certainly! Here's a README template based on the components and setup you've described:
 
 ---
 
