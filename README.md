@@ -61,7 +61,7 @@ To set up BlogBlooms locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Rajeev12R/BlogBloom.git
+   git clone https://github.com/Rajeev12R/BlogBlooms.git
    cd BlogBloom
    ```
 
