@@ -1,7 +1,8 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg" style="background-color: #aad6ec;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">BlogBlooms</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -9,20 +10,40 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Write Blog</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Rajeev Ranjan
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Logout</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
+        <% if (locals.user) { %>
+          <l1 class="nav-item">
+            <a href="/blog/add-new" class="nav-link">Write Blog</a>
+          </l1>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Rajeev Ranjan
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/user/logout">Logout</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <% } else {%>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" target="_blank" href="/user/signup">Create Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" target="_blank" href="/user/signin">Sign In</a>
+            </li>
+
+            <% } %>
+
       </ul>
     </div>
   </div>
 </nav>
+
+<% if (locals.error) { %>
+  <div class="container mt-4">
+
+    <div class="alert alert-danger" role="alert">
+      <%= locals.error %>
+    </div>
+  </div>
+  <% } %>
