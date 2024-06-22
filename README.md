@@ -1,5 +1,3 @@
-
-```markdown
 # BlogBlooms
 
 BlogBlooms is a web application for creating and managing blog posts. It allows users to sign up, sign in, create blog posts with cover images, and view existing blog posts.
