@@ -16,13 +16,14 @@ const userRoute = require("./routes/user");
 const blogRoute = require("./routes/blog");
 const { checkForAuthenticationCookie } = require("./middlewares/authentication");
 
-app.set("view engine", "ejs");
-app.set("views", path.resolve("./views"));
-
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(checkForAuthenticationCookie("token"));
 app.use(express.static(path.resolve("./public")));
+
+app.set("view engine", "ejs");
+app.set("views", path.resolve("./views"));
+
 
 app.get("/", async (req, res) => {
     const allBlogs = await Blog.find({});
