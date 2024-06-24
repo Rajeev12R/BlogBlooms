@@ -17,7 +17,7 @@ const blogSchema = new Schema(
     },
     createdBy: {
       type: Schema.Types.ObjectId,
-      ref: "User", // Make sure "User" matches the name of your user model
+      ref: "user", // Make sure "User" matches the name of your user model
     },
   },
   {
