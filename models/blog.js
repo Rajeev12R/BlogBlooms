@@ -1,6 +1,5 @@
 const { Schema, model } = require("mongoose");
 
-// Define the schema
 const blogSchema = new Schema(
   {
     title: {
@@ -17,15 +16,12 @@ const blogSchema = new Schema(
     },
     createdBy: {
       type: Schema.Types.ObjectId,
-      ref: "user", // Make sure "User" matches the name of your user model
+      ref: "user",
     },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true }
 );
 
-// Create the model
-const Blog = model("Blog", blogSchema); // "Blog" should be capitalized
+const Blog = model("blog", blogSchema);
 
 module.exports = Blog;
