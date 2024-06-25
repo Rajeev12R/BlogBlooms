@@ -23,6 +23,7 @@ BlogBlooms/
 ├── middlewares/
 │   └── authentication.js     # Middleware for handling user authentication
 ├── models/
+|   |__comment.js             # Mongoose model for Comment schema
 │   ├── blog.js               # Mongoose model for Blog schema
 │   └── user.js               # Mongoose model for User schema
 ├── public/
